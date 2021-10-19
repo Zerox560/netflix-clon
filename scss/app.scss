@@ -54,7 +54,7 @@ a {
 .formulario-login {
   @include tablet {
     background-color: rgba(0, 0, 0, 0.85);
-    max-width: 460px;
+    max-width: 420px;
     padding: 2rem 4rem;
     margin: 1.5rem auto 4rem auto;
   }
@@ -108,5 +108,87 @@ form {
         cursor: pointer;
       }
     }
+  }
+}
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0 7rem 0;
+
+  label,
+  a {
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+}
+
+.contenido-inferior {
+  padding-bottom: 2rem;
+  @include tablet {
+    padding-bottom: 0;
+  }
+
+  a {
+    font-size: 0.8rem;
+  }
+  .nuevo-usuario {
+    font-size: 0.8rem;
+    display: flex;
+    margin-top: 1rem;
+
+    a {
+      font-size: 1rem;
+      font-weight: bold;
+      color: $blanco;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.site-footer {
+  border-top: 1px solid $gris2;
+  padding: 2rem 0 4rem 0;
+  @include tablet {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1rem 0 3rem 0;
+  }
+
+  .contenedor {
+    @include tablet {
+      max-width: 50%;
+    }
+  }
+  .menu-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include desktop {
+      max-width: 80%;
+    }
+
+    a {
+      flex: 0 0 auto;
+      font-size: 0.8rem;
+      margin-right: 2rem;
+      padding: 0.5rem 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+  select {
+    appearance: none;
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    border: solid 1px $gris3;
+    border-radius: $radius;
+    font-size: 0.8rem;
+    background-color: $negro;
+    color: $gris2;
+    outline: none;
   }
 }
